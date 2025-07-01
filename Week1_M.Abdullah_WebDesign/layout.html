@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Layout</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .layout-container {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .sidebar {
+      width: 25%;
+      background: #f4f4f4;
+      padding: 10px;
+    }
+
+    .main-content {
+      flex: 1;
+    }
+
+    .card {
+      background: #e3e3e3;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .layout-container {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header style="background:#333; color:#fff; padding:10px; text-align:center;">
+    <h1>My Blog Layout</h1>
+  </header>
+
+  <div class="layout-container">
+    <aside class="sidebar">
+      <h2>Sidebar</h2>
+      <p>Links or categories</p>
+    </aside>
+
+    <main class="main-content">
+      <div class="card">
+        <h3>Blog Post 1</h3>
+        <p>Lorem ipsum dolor sit amet...</p>
+      </div>
+      <div class="card">
+        <h3>Blog Post 2</h3>
+        <p>Consectetur adipiscing elit...</p>
+      </div>
+      <div class="card">
+        <h3>Blog Post 3</h3>
+        <p>Sed do eiusmod tempor...</p>
+      </div>
+    </main>
+  </div>
+
+  <footer>&copy; 2025 Your Name</footer>
+</body>
+</html>
