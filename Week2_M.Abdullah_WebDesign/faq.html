@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - FAQ</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <nav>
+    <div class="navbar">
+      <span class="logo">MyPortfolio</span>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="faq-container">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <div class="faq-question">1. What services do you offer?</div>
+      <div class="faq-answer">I offer web development, UI design, and consultancy.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">2. How can I contact you?</div>
+      <div class="faq-answer">You can reach me through the contact form on the contact page.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">3. Do you work freelance?</div>
+      <div class="faq-answer">Yes, I am available for freelance and remote projects.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">4. What tech stack do you use?</div>
+      <div class="faq-answer">I work primarily with HTML, CSS, JavaScript, React, and Node.js.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">5. Can I see your portfolio?</div>
+      <div class="faq-answer">Yes, please visit the Projects section to see my work.</div>
+    </div>
+  </div>
+
+  <footer>&copy; 2025 M.Abdullah</footer>
+
+  <script>
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      item.addEventListener('click', () => {
+        item.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+
+</html>

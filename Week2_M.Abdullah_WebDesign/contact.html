@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Contact</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <nav>
+    <div class="navbar">
+      <span class="logo">MyPortfolio</span>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="contact-container">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" />
+      <input type="email" id="email" placeholder="Your Email" />
+      <textarea id="message" rows="5" placeholder="Your Message (at least 20 characters)"></textarea>
+      <button type="submit">Send</button>
+      <p id="errorMsg" class="error"></p>
+    </form>
+  </div>
+
+  <footer>&copy; 2025 M.Abdullah</footer>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const errorMsg = document.getElementById('errorMsg');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if (!name || !email || !message) {
+        errorMsg.textContent = 'Please fill in all fields.';
+        return;
+      }
+
+      const emailPattern = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+      if (!emailPattern.test(email)) {
+        errorMsg.textContent = 'Please enter a valid email address.';
+        return;
+      }
+
+      if (message.length < 20) {
+        errorMsg.textContent = 'Message must be at least 20 characters.';
+        return;
+      }
+
+      errorMsg.textContent = '';
+      alert('Form submitted successfully!');
+      form.reset();
+    });
+  </script>
+</body>
+
+</html>
