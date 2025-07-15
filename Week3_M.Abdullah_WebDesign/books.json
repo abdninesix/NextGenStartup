@@ -1,5 +1,28 @@
 [
-    { "id": 1, "title": "1984", "author": "George Orwell" },
-    { "id": 2, "title": "The Great Gatsby", "author": "F. Scott Fitzgerald" }
-  ]
-  
+  {
+    "id": 1,
+    "title": "1984",
+    "author": "George Orwell"
+  },
+  {
+    "id": 2,
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald"
+  },
+  {
+    "id": 3,
+    "title": "The Alchemist",
+    "author": "Paulo Coelho"
+  },
+  {
+    "id": 4,
+    "title": "The Book",
+    "author": "Abs"
+  },
+  {
+    "id": 5,
+    "title": "Book with Date",
+    "author": "Unknown author",
+    "date": "2025-07-15T06:43:55.919Z"
+  }
+]
